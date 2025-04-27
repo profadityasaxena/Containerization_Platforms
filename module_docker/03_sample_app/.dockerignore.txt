@@ -1,0 +1,14 @@
+# Ignore Python virtual environments
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore editor and OS metadata
+.vscode/
+.DS_Store
+*.log
+
+# Ignore temporary files
+*.swp
+*.bak
