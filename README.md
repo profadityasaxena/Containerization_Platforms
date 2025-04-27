@@ -8,6 +8,68 @@ This project investigates, implements, and compares leading containerization pla
 
 ---
 
+## 🌍 Overview of Major Platforms
+
+### 🔹 Docker
+Docker is the most widely adopted containerization platform that simplifies the process of building, sharing, and running containers. It includes a daemon, CLI, and tools like Docker Compose. Its vast community and ecosystem make it ideal for beginners and enterprise adoption alike.
+
+### 🔹 Podman
+Podman is a daemonless container engine developed by RedHat. It allows rootless container management, making it more secure than Docker. Podman can run Dockerfiles and supports pods natively, similar to Kubernetes. It’s well-suited for security-focused environments.
+
+### 🔹 Containerd
+Containerd is a high-performance container runtime used by Kubernetes. It does not include a CLI by default but is used through tools like `ctr` or `nerdctl`. Its modular, low-level architecture makes it perfect for production orchestration at scale.
+
+---
+
+## 📊 Comparison Table
+
+| Feature                 | Docker     | Podman     | Containerd |
+|------------------------|------------|------------|------------|
+| Daemonless             | ❌         | ✅         | ✅         |
+| Rootless Support       | Partial    | Full       | Full       |
+| Dockerfile Support     | ✅         | ✅         | ✅ (via Nerdctl) |
+| Kubernetes Integration | ✅         | ✅         | ✅ (native) |
+| CLI Availability       | ✅         | ✅         | ⚠️ `ctr`, `nerdctl` |
+| Compose Support        | ✅         | ✅         | ❌         |
+| Production Scale       | ✅         | ✅         | ✅         |
+| Security               | Medium     | High       | High       |
+
+---
+
+## 📦 Module Structure
+
+Each module contains:
+- `README.md`: Platform overview and install guide
+- `tutorial/`: Step-by-step setup and use
+- `examples/`: Real-world examples (Dockerfile, pod config, etc.)
+- `screenshots/`: Screenshots of execution and output
+
+---
+
+## 🔧 Module 1: Docker
+- Installation and setup on Windows/Linux
+- Build and run basic containers
+- Use of Docker Compose
+- Image layers and caching
+
+## 🔧 Module 2: Podman
+- Rootless install on Linux
+- Running Dockerfiles using Podman
+- Pod creation and inspection
+- Comparison with Docker CLI
+
+## 🔧 Module 3: Containerd
+- Installation and runtime setup
+- Using `ctr` and `nerdctl` commands
+- Pull, run, stop containers
+- Kubernetes readiness demo
+
+---
+
+## 📌 Final Report
+All findings, screenshots, comparative notes, and performance observations are documented in `FINAL_REPORT.md`.# Containerization_Platforms
+
+
 # 🧠 50 Short Answer Theory Questions on Containerization
 
 ---
@@ -169,64 +231,3 @@ Container Runtime Interface — an abstraction layer between Kubernetes and cont
 To select the best tool for your use case, optimize security/performance, and increase platform flexibility.
 
 ---
-
-## 🌍 Overview of Major Platforms
-
-### 🔹 Docker
-Docker is the most widely adopted containerization platform that simplifies the process of building, sharing, and running containers. It includes a daemon, CLI, and tools like Docker Compose. Its vast community and ecosystem make it ideal for beginners and enterprise adoption alike.
-
-### 🔹 Podman
-Podman is a daemonless container engine developed by RedHat. It allows rootless container management, making it more secure than Docker. Podman can run Dockerfiles and supports pods natively, similar to Kubernetes. It’s well-suited for security-focused environments.
-
-### 🔹 Containerd
-Containerd is a high-performance container runtime used by Kubernetes. It does not include a CLI by default but is used through tools like `ctr` or `nerdctl`. Its modular, low-level architecture makes it perfect for production orchestration at scale.
-
----
-
-## 📊 Comparison Table
-
-| Feature                 | Docker     | Podman     | Containerd |
-|------------------------|------------|------------|------------|
-| Daemonless             | ❌         | ✅         | ✅         |
-| Rootless Support       | Partial    | Full       | Full       |
-| Dockerfile Support     | ✅         | ✅         | ✅ (via Nerdctl) |
-| Kubernetes Integration | ✅         | ✅         | ✅ (native) |
-| CLI Availability       | ✅         | ✅         | ⚠️ `ctr`, `nerdctl` |
-| Compose Support        | ✅         | ✅         | ❌         |
-| Production Scale       | ✅         | ✅         | ✅         |
-| Security               | Medium     | High       | High       |
-
----
-
-## 📦 Module Structure
-
-Each module contains:
-- `README.md`: Platform overview and install guide
-- `tutorial/`: Step-by-step setup and use
-- `examples/`: Real-world examples (Dockerfile, pod config, etc.)
-- `screenshots/`: Screenshots of execution and output
-
----
-
-## 🔧 Module 1: Docker
-- Installation and setup on Windows/Linux
-- Build and run basic containers
-- Use of Docker Compose
-- Image layers and caching
-
-## 🔧 Module 2: Podman
-- Rootless install on Linux
-- Running Dockerfiles using Podman
-- Pod creation and inspection
-- Comparison with Docker CLI
-
-## 🔧 Module 3: Containerd
-- Installation and runtime setup
-- Using `ctr` and `nerdctl` commands
-- Pull, run, stop containers
-- Kubernetes readiness demo
-
----
-
-## 📌 Final Report
-All findings, screenshots, comparative notes, and performance observations are documented in `FINAL_REPORT.md`.# Containerization_Platforms
